@@ -3,17 +3,21 @@ function random(num1, num2) {
 }
 
 
-module.exports.random = async (event, context, callback) => {
+module.exports.random = async (event, context) => {
   const error = undefined;
   const {num1, num2} = event.queryStringParameters;
+  
+  const body = {
+    message: random(Number(num1), Number(num2)),
+    error: error || 0,
+    environment: process.env.ENVIRONMENT
+  }
+  
   return {
     statusCode: 200,
-    "content-type": "application/json",
-    body: 
-      {
-        message: random(Number(num1), Number(num2)),
-        error: error || 0,
-        environment: process.env.ENVIRONMENT
-      },
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body, null, 2)
   };
 };

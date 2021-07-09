@@ -53,6 +53,6 @@
       "httpMethod": "POST",
       "apiId": "j3azlsj0c4"
     },
-    "body": "postcode=LS17FR",
+    "body": "",
     "isBase64Encoded": false
   }
