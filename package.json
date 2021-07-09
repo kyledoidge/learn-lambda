@@ -1,0 +1,19 @@
+{
+  "name": "learn-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "local": "serverless invoke local -f random -p ./test/case1.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyledoidge/learn-lambda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyledoidge/learn-lambda/issues"
+  },
+  "homepage": "https://github.com/kyledoidge/learn-lambda#readme"
+}
